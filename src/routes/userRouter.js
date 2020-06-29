@@ -22,7 +22,7 @@ const upload = multer({
     }
  })
  
- const filesDirectory = path.join(__dirname, '../ProfilePicture')
+ const filesDirectory = path.join(__dirname, '../assets/ProfilePicture')
 
 //  User Registrasi
 router.post('/register',(req,res) => {

@@ -10,7 +10,7 @@ const auth = (req, res, next) => {
       let decoded = jwt.verify(token)
       // Didalam token ada id user, selanjutnya di gunakan untuk mengambil data user di database
       let sqlToken = `SELECT token FROM tokens WHERE token = '${token}'`
-      let sql = `SELECT id, username, name, email, avatar FROM users WHERE id = ${decoded.id}`
+      let sql = `SELECT * FROM users WHERE id = ${decoded.id}`
 
       conn.query(sqlToken, (err, result) => {
          if(err) return res.status(500).send(err)
@@ -30,5 +30,6 @@ const auth = (req, res, next) => {
    }
 
 }
+
 
 module.exports = auth
