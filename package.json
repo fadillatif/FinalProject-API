@@ -20,7 +20,7 @@
     "react-scripts": "3.4.1",
     "sharp": "^0.25.4",
     "shortid": "^2.2.15",
-    "validator": "^13.1.1"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
